@@ -10,6 +10,8 @@ Este es un proyecto para crear mi primer CV en línea utilizando HTML, CSS y Jav
     - [🔧 Instalación](#-instalación)
     - [📦 Estructura del proyecto](#-estructura-del-proyecto)
     - [🛠️ Futuras mejoras](#️-futuras-mejoras)
+    - [🤝 Contribución](#-contribución)
+    - [✒️ Autor](#️-autor)
 
 ## 🚀 Inicio
 
@@ -38,9 +40,9 @@ Interactividad: Agregar elementos interactivos con JavaScript.
 Formulario de contacto: Permitir que los visitantes envíen mensajes directamente desde el CV.
 Animaciones: Mejorar la experiencia del usuario con animaciones sutiles al cargar y al interactuar con el contenido.
 
-###🤝 Contribución
+### 🤝 Contribución
 
 Como se trata de un proyecto personal de CV, no estoy buscando colaboradores activos. Sin embargo, cualquier feedback es bienvenido. Si encuentras un error o tienes alguna sugerencia, ¡no dudes en abrir un issue!
 
-###✒️ Autor
+### ✒️ Autor
 [German G. Weckesser] - Desarrollo inicial
