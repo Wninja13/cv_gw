@@ -79,8 +79,10 @@ nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: #1F1F1F;;
+    background-color: #4a148c;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     padding: 15px 0;
+    background-image: linear-gradient(to right, #3700B3, #BB86FC);
 }
 
 /* Mejoras en la legibilidad y estilización */
@@ -99,11 +101,13 @@ nav a {
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
     white-space: nowrap;
+    color: #EDEDED;
 }
 
 nav a:hover {
-    background-color: #3700B3; 
-    color: #EDEDED; 
+    background-color: #BB86FC;
+    color: #121212;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Estilos para la sección de perfil */
@@ -112,7 +116,7 @@ nav a:hover {
     color: #f4f4f4;
     padding: 20px; 
     border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
     margin: 20px 0; 
 }
 
@@ -167,6 +171,16 @@ label {
     background-color: #e57373;
     width: 0;
     transition: width 2s ease;
+}
+
+/*Estilo para Footer */
+footer {
+    background-color: #1F1F1F;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 /* Animación para que las barras crezcan */
