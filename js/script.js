@@ -17,3 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkScroll);
     checkScroll();
 });
+
+document.querySelectorAll('.social-icon').forEach(icon => {
+    icon.addEventListener('mouseover', function() {
+        this.classList.add('animate__animated', 'animate__rubberBand');
+        
+        // Asegurarse de que la animación se pueda repetir quitando las clases después de que termina.
+        this.addEventListener('animationend', function() {
+            this.classList.remove('animate__animated', 'animate__rubberBand');
+        });
+    });
+});
