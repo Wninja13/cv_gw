@@ -53,8 +53,7 @@ document.querySelectorAll('.social-icon').forEach(icon => {
     });
 });
 
-//Formulario correo electrónico//
-emailjs.init("zd-XnltHuVNlSXwQc"); // Reemplaza 'YOUR_USER_ID' con el ID de usuario de EmailJS
+emailjs.init("zd-XnltHuVNlSXwQc"); // Reemplaza con el ID de usuario de EmailJS
 
 function sendEmail() {
     let name = document.getElementById('name').value;
@@ -69,12 +68,30 @@ function sendEmail() {
     .then(
         function(response) {
             console.log("Email enviado con éxito", response);
-            alert('¡Mensaje enviado exitosamente!');
+            mostrarAlerta();
+
+            // Oculta la alerta después de 3 segundos
+            setTimeout(ocultarAlerta, 3000);
         }, 
         function(error) {
             console.log("Error al enviar el correo electrónico:", error);
-            alert('Error al enviar el mensaje. Revisa la consola para más detalles.');
+            // Aquí puedes mostrar una alerta diferente en caso de error, si lo deseas.
         }
     );
-    }    
+}
 
+function mostrarAlerta() {
+    const alerta = document.querySelector("#alerta");
+    const tickIcon = document.querySelector(".tick-icon");
+
+    alerta.classList.add("mostrar");
+    tickIcon.classList.add("mostrar");
+}
+
+function ocultarAlerta() {
+    const alerta = document.querySelector("#alerta");
+    const tickIcon = document.querySelector(".tick-icon");
+
+    alerta.classList.remove("mostrar");
+    tickIcon.classList.remove("mostrar");
+}

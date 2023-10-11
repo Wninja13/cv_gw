@@ -555,6 +555,106 @@ label {
     background-color: #3700B3;
 }
 
+/*Estilo alerta*/
+#alerta {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px; /* Aumentar el padding */
+    background-color: #FFF;
+    color: #4CAF50;
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s; /* Agregamos transform al transition */
+    width: 400px; /* Aumentar el ancho de la tarjeta */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Establecer una fuente. Cambia esto si tienes una fuente específica en mente */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+}
+
+#alerta:hover {
+    transform: translate(-50%, -55%); /* Mover ligeramente hacia arriba al pasar el cursor por encima */
+}
+
+#alerta h2 { /* Estilo para el título si lo añades */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#alerta p { /* Estilo para cualquier párrafo dentro de la tarjeta */
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0; /* Quitar márgenes */
+}
+
+.tick-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.tick-icon::before,
+.tick-icon::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+}
+
+.tick-icon::before {
+    width: 4px;
+    height: 12px;
+    bottom: 15px;
+    left: 15px;
+    transform: rotate(-45deg);
+}
+
+.tick-icon::after {
+    width: 4px;
+    height: 22px;
+    bottom: 13px;
+    left: 23px;
+    transform: rotate(45deg);
+}
+
+#alerta.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes rotateTick {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateTickShort {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.tick-icon.mostrar::before {
+    animation: rotateTickShort 0.5s forwards;
+}
+
+.tick-icon.mostrar::after {
+    animation: rotateTick 0.5s forwards;
+}
+
+
 /*Estilo para Footer */
 footer {
     background: linear-gradient(160deg, #1F1F1F, #333);
