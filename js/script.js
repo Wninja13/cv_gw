@@ -52,3 +52,29 @@ document.querySelectorAll('.social-icon').forEach(icon => {
         });
     });
 });
+
+//Formulario correo electrónico//
+emailjs.init("zd-XnltHuVNlSXwQc"); // Reemplaza 'YOUR_USER_ID' con el ID de usuario de EmailJS
+
+function sendEmail() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    emailjs.send("service_2xekd4n", "template_8pe85fq", { 
+        from_name: name, 
+        reply_to: email, 
+        message: message 
+    })
+    .then(
+        function(response) {
+            console.log("Email enviado con éxito", response);
+            alert('¡Mensaje enviado exitosamente!');
+        }, 
+        function(error) {
+            console.log("Error al enviar el correo electrónico:", error);
+            alert('Error al enviar el mensaje. Revisa la consola para más detalles.');
+        }
+    );
+    }    
+

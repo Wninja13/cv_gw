@@ -464,14 +464,133 @@ label {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/*Estilo formulario*/
+/* Estilos para la sección de contacto */
+#contacto {
+    background-color: #2a2a2a; 
+    color: #f4f4f4;
+    padding: 30px; 
+    border-radius: 8px; 
+    margin: 20px 0; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+#contacto h2 {
+    font-size: 24px; 
+    margin-bottom: 16px; 
+    border-bottom: 2px solid #f4f4f4; 
+    padding-bottom: 10px; 
+}
+
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+    background-color: #3a3a3a;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(244, 244, 244, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#contactForm > div:last-child {
+    width: auto;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #EDEDED;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(244, 244, 244, 0.2);
+    background-color: #3a3a3a;
+    color: #EDEDED;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    border-color: #BB86FC;
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+    outline: none;
+}
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contactForm button {
+    background-color: #BB86FC;
+    border: none;
+    padding: 10px 20px;
+    color: #EDEDED;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #3700B3;
+}
+
 /*Estilo para Footer */
 footer {
-    background-color: #1F1F1F;
-    padding: 20px;
+    background: linear-gradient(160deg, #1F1F1F, #333);
+    padding: 40px 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    color: #FFF;
+}
+
+footer p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: #FFF;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.1);
+    color: #BB86FC;
+}
+
+/* Sugerido: Añadir una fuente más moderna para el copyright */
+footer p:last-child {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
 }
 
 /* Animación para que las barras crezcan */
