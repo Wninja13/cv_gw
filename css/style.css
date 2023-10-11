@@ -272,7 +272,7 @@ label {
 
 .progress {
     height: 100%;
-    background-color: #e57373;
+    background-color: #BB86FC;
     width: 0;
     transition: width 2s ease;
 }
